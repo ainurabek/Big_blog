@@ -1,0 +1,91 @@
+
+body {
+  background-color: #F5FFFA;
+  font-family: 'Times';
+  
+  }
+
+.page-header {
+    background-color:   #191970;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    font-family:'Times';
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+
+}
+
+.content {
+    margin-left: 40px;
+    font-family: 'Times';
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Times';
+    color:  #C71585;
+}
+
+h1 a, h2 a, h3 a, h4 a:hover{
+    color:#C71585;
+    
+   }
+
+.date {
+    color: #828282;
+    font-family: 'Times';
+}
+.company{
+    color:  #000000;
+    font-family: 'Times';
+}
+
+.company h1{
+  color:  #C71585;
+  font-family: 'Times';
+}
+.company h1 a, .post h1 a:visited {
+    color:  #C71585;
+    font-family: 'Times';
+}
+.save {
+    float: right;
+    font-family: 'Times';
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+    font-family: 'Times';
+}
+.company-form textarea, .post-form input {
+    width: 100%;
+    font-family: 'Times';
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+    font-family: 'Times';
+}
+
+.post h1{
+  color:  #C71585;
+  font-family: 'Times';
+}
+.post h1 a, .post h1 a:visited {
+    color:  #C71585;
+    font-family: 'Times';
+}
+.post-text{
+    color:  #191970;
+    font-family: 'Times';
+}

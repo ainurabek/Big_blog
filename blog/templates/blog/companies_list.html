@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    {% for company in companies %} 
+    <!-- this is value(2d companies) from view  class Cmpanies return render {'companies': companies}) -->
+        <div class="company">
+            <div class="date">
+                <p>published: {{ company.published_date }}</p>
+            </div>
+            <h1><a href="{% url 'company_detail' pk=company.pk %}">{{ company.name}}</a></h1> 
+            <div class="company.info">
+            	<p>{{ company.info|linebreaksbr }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}   
+  
+<!-- pk=company.pk - это company тот который в for loop ф там может быть любое другое значение -->
