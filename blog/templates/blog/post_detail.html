@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.created_date %}
+            <div class="date">
+                {{ post.created_date }}
+            </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+     	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil" style="color:green;">EDIT</span></a>
+		{% endif %}
+        <h1>{{ post.title }}</h1>
+        <p> {{post.company}}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <img src="{{post.logo.url }}">  
+    
+
+        <h1>New comment</h1>
+        <form method="POST" enctype="multipart/form-data" class="comments-form">{% csrf_token %}
+
+        {{ form.as_p }}
+
+          
+        
+        <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+
+        
+    </div>
+    {% for comments in comments %}
+        <div class="comments">
+            <div class="date">
+                <p>Created: {{ comments.created_date }}</p>
+            </div>
+            <h1><a href="{% url 'comments_detail' pk=comments.pk %}">{{comments.text}}</a></h1>
+           
+             
+        </div>
+    {% endfor %}
+{% endblock %}

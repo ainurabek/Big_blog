@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    {% for comments in comments %}
+        <div class="comments">
+            <div class="date">
+                <p>Created: {{ comments.created_date }}</p>
+            </div>
+            <h1><a href="{% url 'comments_detail' pk=comments.pk %}">{{comments.text}}</a></h1>
+            <div class="company">
+                <p>{{comments.company}}</p>
+                <p>{{comments.post}}</p>
+            </div>
+           
+        </div>
+    {% endfor %}
+
+{% endblock %}
